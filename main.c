@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 13:08:43 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/05 16:52:51 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/06 00:15:22 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,13 @@ int main()
 ***/
 
 /***ft_memccpy.c***/
-///***
+/***
 int main()
 {
-	char a[50] = "This is ft_memccpy";
+	char a[50] = "This is memccpy";
 	char b[50] = "Copied String";
 	printf("ft_memccpy output: %s\n", ft_memccpy(a,b,'S',10));
-	char a2[50] = "This is ft_memccpy";
+	char a2[50] = "This is memccpy";
 	char b2[50] = "Copied String";
 	printf("ft_memccpy output: %s\n", ft_memccpy(a2,b2,'C',10));
 	char a1[50] = "This is memccpy";
@@ -68,5 +68,61 @@ int main()
 	printf("memccpy output: %s\n", memccpy(a3,b3,'C',10));
 	return(0);
 }
-//***/
+***/
 
+/***ft_memmove_***/
+/***
+int main()
+{
+    char a1[50] = "This was A";
+    char b1[50] = "Now its B";
+    printf("%s\n", ft_memmove(a1, b1, 10));
+	char a2[50] = "This was A";
+	const char b2[50] = "Now its B";
+	printf("%s\n", memmove(a2, b2, 5));
+	return 0;
+}
+***/
+
+/***ft_memchr***/
+/***
+int main()
+{
+	char chr1[256] = "This is ft_memchr";
+	char chr2[256] = "This is ft_memchr";
+    printf("%s\n",ft_memchr(chr1, 'c', 16));
+    printf("%s\n",ft_memchr(chr1, 'c', 3));
+	printf("%s\n",ft_memchr(chr2, 'z', 16));
+   	printf("%s\n",memchr(chr1, 'c', 16));
+    printf("%s\n",memchr(chr1, 'c', 3));
+	printf("%s\n",memchr(chr1, 'z', 16));
+    return 0;
+}
+***/
+
+/***ft_memcmp***/
+/***
+int main()
+{
+	char s1[256] = "This is ft_memcmp";
+	char s2[256] = "This is ft_memcmp";
+	char a1[256] = "This is Not memcmp";
+	char a2[256] = "This is memcmp";
+	printf("%d\n", ft_memcmp(s1, s2, 10));
+	printf("%d\n", ft_memcmp(a1, a2, 10));
+	printf("%d\n", memcmp(s1, s2, 10));
+	printf("%d\n", memcmp(a1, a2, 10));
+	return(0);
+}
+***/
+
+/***ft_strdup***/
+/***
+int main()
+{
+	char s1[] = "This is ft_strdup";
+	printf("%s\n", ft_strdup(s1));
+	printf("%s\n", strdup(s1));
+	return(0);
+}
+**/	
