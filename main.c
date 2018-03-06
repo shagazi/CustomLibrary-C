@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 13:08:43 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/05 15:12:34 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/05 16:52:51 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,16 @@ int main()
 {
 	char a[50] = "This is ft_memccpy";
 	char b[50] = "Copied String";
+	printf("ft_memccpy output: %s\n", ft_memccpy(a,b,'S',10));
 	char a2[50] = "This is ft_memccpy";
 	char b2[50] = "Copied String";
-	printf("ft_memccpy output: %s\n", ft_memccpy(a,b,'S',10));
 	printf("ft_memccpy output: %s\n", ft_memccpy(a2,b2,'C',10));
-	char a1[50] = "This is ft_memccpy";
+	char a1[50] = "This is memccpy";
 	char b1[50] = "Copied String";
 	printf("memccpy output: %s\n", memccpy(a1,b1,'S',10));
-	printf("memccpy output: %s\n", memccpy(a1,b1,'C',10));
+	char a3[50] = "This is memccpy";
+	char b3[50] = "Copied String";
+	printf("memccpy output: %s\n", memccpy(a3,b3,'C',10));
 	return(0);
 }
 //***/
