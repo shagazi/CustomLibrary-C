@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 13:08:43 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/11 00:26:37 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/08 16:55:24 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,62 +231,10 @@ int main()
 }
 ***/
 
-/***ft_strtrim***/
-/***
 int main()
 {
     char a[50] = "   string  string   ";
-    printf("%s\n", ft_strtrim(a));
+    printf("%c\n", ft_rmwhitespace(a));
 
     return (0);
 }
-***/
-
-/***ft_strsplit***/
-/***
-int main()
-{
-	char a[] = "*String*sstring*string";
-	char **arr = ft_strsplit(a, '*');
-	while(*arr)
-		printf("%s\n", *arr++);
-	return 0;
-}
-***/
-
-/************************Extra Functions***************************/
-
-/***ft_rmwhitespace***/
-/***
-int main()
-{
-    char a[50] = "   string  string   ";
-    printf("%s\n", ft_rmwhitespace(a));
-
-    return (0);
-}
-***/
-
-/***ft_word***/
-/***
-int main()
-{
-	char a[50] = " String  sstring string";
-	printf("%s\n", ft_word(a));
-	return (0);
-}
-**/
-
-/***ft_nochar***/
-/**
-int main()
-{
-	char a[] = "*String***sstring*string";
-	printf("%s\n", ft_nochar(a, '*'));
-	printf("%s\n", ft_nochar(a, '*'));
-	printf("%s\n", ft_nochar(a, '*'));
-	printf("%s\n", ft_nochar(a, '*'));
-
-	return (0);
-}
-***/

@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/01 16:31:48 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/06 21:13:47 by shagazi          ###   ########.fr       */
+/*   Created: 2018/03/07 17:09:43 by shagazi           #+#    #+#             */
+/*   Updated: 2018/03/07 18:12:36 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	void *ptr;
+	int i;
 
-	if (!(ptr = (void*)malloc(sizeof(void*) * size)))
-		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(&s[i] != '\0');
+		i++;
+	}
 }

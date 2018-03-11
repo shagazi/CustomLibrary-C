@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/01 16:31:48 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/06 21:13:47 by shagazi          ###   ########.fr       */
+/*   Created: 2018/03/08 16:28:21 by shagazi           #+#    #+#             */
+/*   Updated: 2018/03/08 18:51:23 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strtrim(char const *s)
 {
-	void *ptr;
-
-	if (!(ptr = (void*)malloc(sizeof(void*) * size)))
-		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
-}
+	char *fresh;
+	
+	fresh = ft_rmwhitespace((char*)s);
+	return (fresh);
+}	

@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_nochar.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/01 16:31:48 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/06 21:13:47 by shagazi          ###   ########.fr       */
+/*   Created: 2018/03/10 21:45:36 by shagazi           #+#    #+#             */
+/*   Updated: 2018/03/11 00:34:16 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_nochar(char *s, char c)
 {
-	void *ptr;
+	int		i;
+	int		k;
+	char	*str;
 
-	if (!(ptr = (void*)malloc(sizeof(void*) * size)))
-		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
+	k = 0;
+	i = 0;
+	while (s[i] != '\0' || s[i] == c)
+	{
+		if (s[i] != c)
+		{
+			while (s[i] && s[i] != c)
+			{
+				i++;
+				k++;
+			}
+			i -= k;
+			str = ft_strsub(s, i, k);
+			k += i - 1;
+			while (i <= k)
+				s[i++] = c;
+			return (str);
+		}
+		i++;
+	}
+	return (0);
 }

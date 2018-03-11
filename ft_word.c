@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_word.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/01 16:31:48 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/06 21:13:47 by shagazi          ###   ########.fr       */
+/*   Created: 2018/03/08 19:27:08 by shagazi           #+#    #+#             */
+/*   Updated: 2018/03/11 00:47:03 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_word(char *s)
 {
-	void *ptr;
+	int		i;
+	int		k;
+	char	*str;
 
-	if (!(ptr = (void*)malloc(sizeof(void*) * size)))
-		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
+	i = 0;
+	k = 0;
+	while (s[i] != '\0')
+	{
+		if ((s[i] >= 65 && s[i] <= 90) || (s[i] >= 97 && s[i] <= 122))
+		{
+			while ((s[i] >= 65 && s[i] <= 90) || (s[i] >= 97 && s[i] <= 122))
+			{
+				i++;
+				k++;
+			}
+			i -= k;
+			str = ft_strsub(s, i, k);
+			k += i - 1;
+			while (i <= k)
+				s[i++] = ' ';
+			return (str);
+		}
+		i++;
+	}
+	return (0);
 }
