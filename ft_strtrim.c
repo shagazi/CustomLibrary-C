@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/08 16:28:21 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/08 18:51:23 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/12 19:31:18 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strtrim(char const *s)
 {
 	char *fresh;
-	
+
 	fresh = ft_rmwhitespace((char*)s);
 	return (fresh);
-}	
+}

@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/02 17:33:49 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/05 19:35:01 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/12 16:30:15 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		a1[i] = b1[i];
-		n--;
 		i++;
 	}
 	return (a1);

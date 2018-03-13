@@ -6,18 +6,17 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 22:50:14 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/01 16:30:24 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/12 19:19:59 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <stdlib.h>
+#include "libft.h"
 
 int		ft_atoi(char *str)
 {
-	int i;
-	int number;
-	int isneg;
+	int		i;
+	int		number;
+	int		isneg;
 
 	i = 0;
 	number = 0;
@@ -40,15 +39,3 @@ int		ft_atoi(char *str)
 	else
 		return (number);
 }
-
-/*int main ()
-{
-	printf("%d\n", ft_atoi("-2147483648"));
-	printf("%d\n", atoi("-2147483648"));
-	printf("%d\n", ft_atoi("123123"));
-	printf("%d\n", ft_atoi(" -+1231sgasd232"));
-	printf("%d\n", atoi("  -+1231sgasd232"));
-	printf("%d\n", ft_atoi("2147483647"));
-	printf("%d\n", atoi("2147483648"));
-	return (0);
-}*/

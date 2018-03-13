@@ -6,12 +6,11 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/27 14:07:20 by shagazi           #+#    #+#             */
-/*   Updated: 2018/02/27 14:16:57 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/12 19:20:32 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c);
-int ft_isalpha(int c);
+#include "libft.h"
 
 int		ft_isalnum(int c)
 {

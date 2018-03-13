@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 19:36:25 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/01 20:18:01 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/12 19:27:48 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strncat(char *dest, char *src, size_t n)
 {
-	int i;
-	int j;
-	size_t len;
+	int		i;
+	int		j;
+	size_t	len;
 
 	i = 0;
 	j = 0;

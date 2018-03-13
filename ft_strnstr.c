@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 16:47:23 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/01 20:05:06 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/12 19:28:11 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
-	int i;
-	int j;
-	size_t k;
+	int		i;
+	int		j;
+	size_t	k;
 
 	i = 0;
 	j = 0;
