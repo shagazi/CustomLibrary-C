@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 20:30:36 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/05 23:23:01 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/12 23:24:00 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int						i;
+	size_t					i;
 	const unsigned char		*a1;
 	const unsigned char		*b2;
 

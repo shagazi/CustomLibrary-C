@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/25 22:24:38 by shagazi           #+#    #+#             */
-/*   Updated: 2018/02/26 17:32:05 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/14 13:17:21 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ char	*ft_strchr(char *str, int c)
 
 	ch = c;
 	i = 0;
+	if (ch == '\0')
+	{
+		while (str[i] != '\0')
+			i++;
+		if (str[i] == '\0')
+			return (&str[i]);
+	}
 	while (str[i] != '\0')
 	{
 		if (str[i] == ch)

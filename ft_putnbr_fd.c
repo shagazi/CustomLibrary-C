@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 00:45:52 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/12 16:12:38 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/12 23:29:55 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_strdup("-2147483648");
 	else if (n < 0)
 	{
-		ft_putchar('-');
-		ft_putnbr(-n);
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
 	}
 	else if (n > 9)
 	{
-		ft_putnbr(n / 10);
-		ft_putchar(n % 10 + '0');
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
 	}
 	else
-		ft_putchar(n + '0');
+		ft_putchar_fd(n + '0', fd);
 }

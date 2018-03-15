@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 15:56:12 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/01 20:02:35 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/14 19:36:28 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,25 @@
 
 char	*ft_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
+	size_t	lenneedle;
 
-	j = 0;
 	i = 0;
+	j = 0;
+	lenneedle = ft_strlen(needle);
+	if (needle[i] == '\0')
+		return (&haystack[i]);
 	while (haystack[i] != '\0')
 	{
-		if (needle[j] == '\0')
-			return (&haystack[i]);
-		while (haystack[i] == needle[j])
+		if (haystack[i] == needle[j])
 		{
-			return (&haystack[i]);
-			i++;
-			j++;
+			if (ft_strsubncmp(haystack, needle, i, lenneedle) == 0)
+				return (&haystack[i]);
+			else
+				j = 0;
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

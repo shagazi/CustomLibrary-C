@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 15:20:51 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/12 14:37:44 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/14 17:15:16 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnew(size_t size)
 	char	*str;
 
 	i = 0;
-	if (!(str = (char*)malloc(sizeof(char*) * size + 1)))
+	if (!(str = (char*)malloc(sizeof(char) * size + 1)))
 		return (NULL);
 	str[size] = '\0';
 	ft_bzero(str, size);
