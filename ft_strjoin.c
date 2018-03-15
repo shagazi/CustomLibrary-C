@@ -6,22 +6,35 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/08 16:14:59 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/12 16:24:54 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/14 23:06:19 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char    *ft_strjoin(char const *s1, char const *s2)
 {
 	char	*fresh;
 	int		sizestr;
-
+	int		count;
+	
+	count =0;
 	if (!s1 || !s2)
 		return (NULL);
-	sizestr = ft_strlen((char*)s1) + ft_strlen((char*)s2);
+	sizestr = strlen((char*)s1) + strlen((char*)s2);
 	if (!(fresh = ft_strnew(sizestr)))
 		return (NULL);
-	fresh = ft_strcat((char*)s1, (char*)s2);
-	return (fresh);
+	while (*s1 != '\0')
+	{
+		*fresh = *s1;
+		fresh += (s1 += 1) ? 1 : 1;
+		count++;
+	}
+	while (*s2 != '\0')
+	{
+		*fresh = *s2;
+		fresh += (s2 += 1) ? 1 : 1;
+		count++;
+	}
+	return (fresh - count);
 }

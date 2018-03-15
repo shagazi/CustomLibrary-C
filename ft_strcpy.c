@@ -6,13 +6,13 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 10:56:29 by shagazi           #+#    #+#             */
-/*   Updated: 2018/02/26 17:33:26 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/14 21:12:56 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 

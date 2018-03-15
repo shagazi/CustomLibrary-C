@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/08 16:30:24 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/08 18:47:06 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/14 23:40:16 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,19 @@ char	*ft_rmwhitespace(char *s)
 	k = 0;
 	while (s[k] != '\0')
 		k++;
+	if (s[k] == '\0')
+		return (NULL);
 	k--;
-	while (s[k] == ' ' || s[k] == '\n' || s[k] == '\t')
+	while ((s[k] == ' ' || s[k] == '\n' || s[k] == '\t') && (k != 0))
 		k--;
 	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	str = ft_strnew(k - i + 1);
+			i++;
+	if(!(str = ft_strnew(k - i + 1)))
+		return (NULL);
 	while (i <= k)
 	{
 		str[j] = s[i];
-		i++;
-		j++;
+		i+= (j += 1) ? 1 : 1;
 	}
-	str[j] = '\0';
 	return (str);
 }

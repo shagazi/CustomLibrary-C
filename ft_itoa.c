@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/11 00:59:42 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/12 15:54:25 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/15 01:01:25 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,14 @@ char			*ft_itoa(int n)
 	if (n < 0)
 	{
 		isneg = 1;
-		num = ft_strnew(count + isneg);
+		if (!(num = ft_strnew(count + isneg)))
+			return (NULL);
 		count = count + 1;
 		n *= -1;
 		num[0] = '-';
 	}
-	else
-		num = ft_strnew(count + isneg);
+	else if (!(num = ft_strnew(count + isneg)))
+		return (NULL);
 	num = ft_itoaconvert(count, n, num);
 	return (num);
 }

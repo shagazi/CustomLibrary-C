@@ -6,13 +6,13 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 19:27:29 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/12 19:16:55 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/14 21:13:39 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	int		i;
 	int		j;

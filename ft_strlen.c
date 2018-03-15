@@ -6,13 +6,13 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 11:20:52 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/06 19:41:01 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/14 21:09:53 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int		ft_strlen(const char *str)
 {
 	int i;
 
