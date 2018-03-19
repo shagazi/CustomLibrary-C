@@ -6,14 +6,14 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/14 17:33:23 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/14 19:34:25 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/17 00:35:48 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int		ft_strsubncmp(char *haystack, char *needle,
-        unsigned int start, size_t len)
+		unsigned int start, size_t len)
 {
 	int		i;
 	char	*str;
@@ -25,7 +25,7 @@ int		ft_strsubncmp(char *haystack, char *needle,
 		str[i] = haystack[start + i];
 		i++;
 	}
-	while(*str != '\0' && *needle != '\0')
+	while (*str != '\0' && *needle != '\0')
 	{
 		if (*str != *needle)
 			return (*str - *needle);

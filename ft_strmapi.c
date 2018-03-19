@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 23:11:49 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/14 22:00:12 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/16 23:45:33 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!(s))
 		return (NULL);
-	if(!(str = ft_strnew(ft_strlen((char*)s))))
+	if (!(str = ft_strnew(ft_strlen((char*)s))))
 		return (NULL);
 	while (s[i] != '\0')
 	{

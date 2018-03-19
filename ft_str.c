@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nochar.c                                        :+:      :+:    :+:   */
+/*   ft_str.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/10 21:45:36 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/11 00:34:16 by shagazi          ###   ########.fr       */
+/*   Created: 2018/03/17 00:28:00 by shagazi           #+#    #+#             */
+/*   Updated: 2018/03/17 00:28:30 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_nochar(char *s, char c)
+char		*ft_str(const char *s, char c, int *i)
 {
-	int		i;
-	int		k;
+	int		j;
 	char	*str;
 
-	k = 0;
-	i = 0;
-	while (s[i] != '\0' || s[i] == c)
+	if (!(str = (char *)malloc(sizeof(str) * (ft_strlen(s)))))
+		return (NULL);
+	j = 0;
+	while (s[*i] != c && s[*i])
 	{
-		if (s[i] != c)
-		{
-			while (s[i] && s[i] != c)
-			{
-				i++;
-				k++;
-			}
-			i -= k;
-			str = ft_strsub(s, i, k);
-			k += i - 1;
-			while (i <= k)
-				s[i++] = c;
-			return (str);
-		}
-		i++;
+		str[j] = s[*i];
+		j++;
+		*i += 1;
 	}
-	return (0);
+	str[j] = '\0';
+	while (s[*i] == c && s[*i])
+		*i += 1;
+	return (str);
 }

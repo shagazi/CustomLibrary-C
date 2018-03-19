@@ -6,7 +6,7 @@
 #    By: shagazi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/01 18:30:14 by shagazi           #+#    #+#              #
-#    Updated: 2018/03/14 18:28:21 by shagazi          ###   ########.fr        #
+#    Updated: 2018/03/17 00:36:13 by shagazi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ SRCS= ft_memalloc.c \
 	  ft_strcpy.c \
 	  ft_strncat.c \
 	  ft_tolower.c \
-	  ft_bytecopy.c \
 	  ft_memcmp.c \
 	  ft_putnbr.c \
 	  ft_strdel.c \
@@ -43,7 +42,6 @@ SRCS= ft_memalloc.c \
 	  ft_putnbr_fd.c \
 	  ft_strdup.c \
 	  ft_strncpy.c \
-	  ft_word.c \
 	  ft_isalnum.c \
 	  ft_memdel.c \
 	  ft_putstr.c \
@@ -60,7 +58,6 @@ SRCS= ft_memalloc.c \
 	  ft_striteri.c \
 	  ft_strnstr.c \
 	  ft_isdigit.c \
-	  ft_nochar.c \
 	  ft_strcat.c \
 	  ft_strjoin.c \
 	  ft_strrchr.c \
@@ -74,7 +71,10 @@ SRCS= ft_memalloc.c \
 	  ft_strclr.c \
 	  ft_strlen.c \
 	  ft_strstr.c \
-	  ft_strsubncmp.c 
+	  ft_strsubncmp.c \
+	  ft_spacecheck.c \
+	  ft_str.c \
+	  ft_strcount.c
 
 OBJS= ft_memalloc.o \
 	  ft_putendl.o \
@@ -92,7 +92,6 @@ OBJS= ft_memalloc.o \
 	  ft_strcpy.o \
 	  ft_strncat.o \
 	  ft_tolower.o \
-	  ft_bytecopy.o \
 	  ft_memcmp.o \
 	  ft_putnbr.o \
 	  ft_strdel.o \
@@ -103,7 +102,6 @@ OBJS= ft_memalloc.o \
 	  ft_putnbr_fd.o \
 	  ft_strdup.o \
 	  ft_strncpy.o \
-	  ft_word.o \
 	  ft_isalnum.o \
 	  ft_memdel.o \
 	  ft_putstr.o \
@@ -120,7 +118,6 @@ OBJS= ft_memalloc.o \
 	  ft_striteri.o \
 	  ft_strnstr.o \
 	  ft_isdigit.o \
-	  ft_nochar.o \
 	  ft_strcat.o \
 	  ft_strjoin.o \
 	  ft_strrchr.o \
@@ -134,7 +131,10 @@ OBJS= ft_memalloc.o \
 	  ft_strclr.o \
 	  ft_strlen.o \
 	  ft_strstr.o \
-	  ft_strsubncmp.o 
+	  ft_strsubncmp.o \
+	  ft_spacecheck.o \
+	  ft_str.o \
+	  ft_strcount.o
 
 all: $(NAME)
 

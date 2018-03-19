@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 18:12:57 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/14 21:53:40 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/16 23:45:45 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*str;
 
 	i = 0;
-	if(!s)
+	if (!s)
 		return (0);
 	if (s[i] != '\0')
 	{

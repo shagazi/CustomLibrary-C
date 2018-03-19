@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_spacecheck.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/13 14:44:50 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/13 15:05:55 by shagazi          ###   ########.fr       */
+/*   Created: 2018/03/17 00:22:25 by shagazi           #+#    #+#             */
+/*   Updated: 2018/03/17 00:23:44 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 #include "libft.h"
 
-int main()
+int		ft_spacecheck(char *s)
 {
-	printf("%s\n", ft_memcpy(((void *)0), "segfaulter tu dois", 17));
-	printf("%s\n", ft_memcpy("			", ((void *)0), 17));
-	return (0);
+	int k;
+
+	k = ft_strlen(s) - 1;
+	while ((s[k] == ' ' || s[k] == '\n' || s[k] == '\t') && (k != 0))
+		k--;
+	return (k);
 }

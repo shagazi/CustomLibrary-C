@@ -6,21 +6,11 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/08 16:28:21 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/15 00:55:43 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/17 00:23:20 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_spacecheck(char *s)
-{
-	int k;
-
-	k = ft_strlen(s) - 1;
-	while ((s[k] == ' ' || s[k] == '\n' || s[k] == '\t') && (k != 0))
-		k--;
-	return (k);
-}
 
 char		*ft_strtrim(char const *s)
 {

@@ -6,11 +6,11 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 19:27:29 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/14 21:13:39 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/17 00:06:16 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

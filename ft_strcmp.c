@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 19:03:41 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/14 21:06:52 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/16 23:40:42 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int		ft_strcmp(const char *s1, const char *s2)
 		s1++;
 		s2++;
 	}
-	return ((unsigned char) *s1 - (unsigned char) *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

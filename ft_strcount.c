@@ -6,35 +6,29 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/11 00:14:17 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/12 23:22:45 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/17 00:31:04 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcount(char *s, char c)
+int		ft_strcount(const char *s, char c)
 {
-	int		i;
-	int		k;
+	int	i;
+	int	k;
 
 	k = 0;
 	i = 0;
-	while (s[i] != '\0' || s[i] == c)
+	if (!s)
+		return (0);
+	while (s[i] != '\0')
 	{
-		if (s[i] != c)
-		{
-			while (s[i] && s[i] != c)
-			{
-				i++;
-				k++;
-			}
-			i -= k;
-			k += i - 1;
-			while (i <= k)
-				s[i++] = c;
-			return (1);
-		}
+		if (s[i] == c && s[i + 1] != c)
+			k++;
 		i++;
 	}
-	return (0);
+	if (s[0] != '\0')
+		k++;
+	return (k);
 }
+

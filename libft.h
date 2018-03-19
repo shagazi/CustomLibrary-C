@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 00:51:18 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/15 00:57:43 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/17 00:36:06 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,12 +82,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 ssize_t	write(int fd, const void *buf, size_t count);
 
+char	*ft_str(const char *s, char c, int *i);
+int		ft_strcount(const char *s, char c);
+int		ft_spacecheck(char *s);
 char	*ft_rmwhitespace(char *s);
-char	*ft_word(char *s);
-void	*ft_bytecopy(void *s1, const void *s2, int i, int j);
-char	*ft_nochar(char *s, char c);
-int		ft_strcount(char *s, char c);
 int		ft_atoi(char *str);
-int		ft_strsubncmp(char *haystack, char *needle, unsigned int start, size_t len);
+int		ft_strsubncmp(char *haystack, char *needle,
+		unsigned int start, size_t len);
 
 #endif
