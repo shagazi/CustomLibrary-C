@@ -1,18 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/19 13:05:25 by shagazi           #+#    #+#             */
+/*   Updated: 2018/03/19 15:08:49 by shagazi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	t_list *new_elementi;
-
-	if(!(new_element = (t_list*)malloc(sizeof(t_list)))
-		return NULL;
-	if(*alst == NULl)
+	if (alst && new)
 	{
-		*alst=new;
-		*alst->next = NULL;
+		new->next = *alst;
+		*alst = new;
 	}
-	else
-	{
-		new_element->data = new;
-		new_element->next = *alst;
-		*alst = new_element;
-	}
-
+}

@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/08 19:21:23 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/19 18:10:33 by shagazi          ###   ########.fr       */
+/*   Created: 2018/03/19 13:04:04 by shagazi           #+#    #+#             */
+/*   Updated: 2018/03/19 17:23:32 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**ft_strsplit(char const *s, char c)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	int		i;
-	int		j;
-	int		count;
-	char	**arr;
+	t_list *current;
+	t_list *next;
 
-	i = 0;
-	j = 0;
-	count = ft_strcount(s, c);
-	if (!s || !c)
-		return (NULL);
-	if (!(arr = (char **)malloc(sizeof(arr) * count + 2)))
-		return (NULL);
-	while (s[i] == c && s[i])
-		i++;
-	while (j < count && s[i])
+	current = *alst;
+	if (del && alst)
 	{
-		arr[j] = ft_str(s, c, &i);
-		j++;
+		while (current != '\0')
+		{
+			next = current->next;
+			del(current->content, current->content_size);
+			free(current);
+			current = next;
+		}
+		*alst = NULL;
 	}
-	arr[j] = NULL;
-	return (arr);
 }

@@ -6,11 +6,19 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/08 16:28:21 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/17 00:23:20 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/19 18:25:40 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	init_vars(int *a, int *b, int *c, char **str)
+{
+	*a = 0;
+	*b = 0;
+	*c = 0;
+	*str = NULL;
+}
 
 char		*ft_strtrim(char const *s)
 {
@@ -19,13 +27,10 @@ char		*ft_strtrim(char const *s)
 	int		k;
 	char	*str;
 
-	i = 0;
-	j = 0;
-	k = 0;
-	if (s[k] == '\0')
-		k = 0;
-	else
-		k = ft_spacecheck((char *)s);
+	init_vars(&i, &j, &k, &str);
+	if (!s)
+		return (NULL);
+	k = s[k] == '\0' ? 0 : ft_spacecheck((char *)s);
 	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
 	if (k <= i)

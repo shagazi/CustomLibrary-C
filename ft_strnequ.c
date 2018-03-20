@@ -6,7 +6,7 @@
 /*   By: shagazi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/08 14:57:23 by shagazi           #+#    #+#             */
-/*   Updated: 2018/03/14 22:05:51 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/03/19 18:12:57 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 	i = 0;
 	if (!(s1) || !(s2))
 		return (0);
-	while ((*s1 == *s2) && (i < n) && (*s1 != '\0' || *s2 != '\0'))
-	{
-		s1++;
-		s2++;
-		i++;
-	}
-	if (*s1 == *s2)
+	if (!ft_strncmp(s1, s2, n))
 		return (1);
 	return (0);
 }

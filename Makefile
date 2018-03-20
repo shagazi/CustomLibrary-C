@@ -6,7 +6,7 @@
 #    By: shagazi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/01 18:30:14 by shagazi           #+#    #+#              #
-#    Updated: 2018/03/17 00:36:13 by shagazi          ###   ########.fr        #
+#    Updated: 2018/03/19 17:12:51 by shagazi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,14 @@ SRCS= ft_memalloc.c \
 	  ft_strsubncmp.c \
 	  ft_spacecheck.c \
 	  ft_str.c \
-	  ft_strcount.c
+	  ft_strcount.c \
+	  ft_memdup.c \
+	  ft_lstadd.c \
+	  ft_lstnew.c \
+	  ft_lstdel.c \
+	  ft_lstiter.c \
+	  ft_lstdelone.c \
+	  ft_lstmap.c \
 
 OBJS= ft_memalloc.o \
 	  ft_putendl.o \
@@ -134,7 +141,15 @@ OBJS= ft_memalloc.o \
 	  ft_strsubncmp.o \
 	  ft_spacecheck.o \
 	  ft_str.o \
-	  ft_strcount.o
+	  ft_strcount.o \
+	  ft_memdup.o \
+	  ft_lstadd.o \
+	  ft_lstnew.o \
+	  ft_lstdel.o \
+	  ft_lstiter.o \
+	  ft_lstdelone.o \
+	  ft_lstmap.o \
+
 
 all: $(NAME)
 
